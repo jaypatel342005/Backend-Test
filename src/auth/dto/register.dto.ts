@@ -3,7 +3,7 @@ import {
   IsNotEmpty,
   IsString,
   IsStrongPassword,
-} from 'class-validator';
+} from 'class-validator'
 export class RegisterDto {
   @IsNotEmpty()
   @IsString()

@@ -36,7 +36,7 @@ export class CommentsService {
     const comment = await this.getComment(id);
 
     if (role !== 'MANAGER' && comment.user_id !== userId) {
-      throw new ForbiddenException('you  edit your   comments');
+      throw new ForbiddenException('you  edit your   comments')
     }
 
     const updated = await this.prisma.ticket_comments.update({
@@ -54,10 +54,10 @@ export class CommentsService {
     const comment = await this.getComment(id);
 
     if (role !== 'MANAGER' && comment.user_id !== userId) {
-      throw new ForbiddenException('you only delete comments');
+      throw new ForbiddenException('you only delete comments')
     }
 
     await this.prisma.ticket_comments.delete({ where: { id } });
-    return { message: 'Comment deleted' };
+    return { message: 'Comment deleted' }
   }
 }

@@ -1,7 +1,7 @@
 import { Controller, Patch, Delete, Param, Body, UseGuards, Request, ParseIntPipe } from '@nestjs/common';
-import { CommentsService } from './comments.service';
-import { UpdateCommentDto } from './dto/update-comment.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { CommentsService } from './comments.service'
+import { UpdateCommentDto } from './dto/update-comment.dto'
+import { JwtAuthGuard } from '../auth/jwt-auth.guard'
 
 @UseGuards(JwtAuthGuard)
 @Controller('comments')

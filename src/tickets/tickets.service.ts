@@ -20,7 +20,7 @@ function fmtUser(u: any) {
     email: u.email,
     role: u.roles ? { id: u.roles.id, name: u.roles.name } : null,
     created_at: u.created_at,
-  };
+  }
 }
 
 function fmtTicket(t: any) {
