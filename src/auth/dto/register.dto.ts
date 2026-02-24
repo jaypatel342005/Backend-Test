@@ -7,11 +7,11 @@ import {
 export class RegisterDto {
   @IsNotEmpty()
   @IsString()
-  name: string;
+  name: string
 
   @IsEmail()
-  email: string;
+  email: string
 
   @IsStrongPassword()
-  password: string;
+  password: string
 }
